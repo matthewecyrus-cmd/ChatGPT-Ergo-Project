@@ -35,3 +35,45 @@ nav a.active { background: #0f172a; color: white; }
 label { color: #334155; font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .05em; }
 input, select { width: 100%; margin-top: 7px; border: 1px solid #cbd5e1; border-radius: 12px; padding: 10px 12px; color: #0f172a; background: white; outline: none; }
 input:focus, select:focus { border-color: #0f172a; }
+.media-card { padding: 0; overflow: hidden; }
+.media-card > .card-header { padding: 20px 20px 0; }
+.camera-preview { width: calc(100% - 40px); margin: 0 20px 16px; aspect-ratio: 16 / 9; object-fit: contain; background: #020617; border-radius: 18px; }
+.video-box { margin: 0; background: #020617; padding: 20px; }
+.task-video { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; display: block; background: #0f172a; border-radius: 18px; }
+.upload-drop { min-height: 360px; display: grid; place-items: center; align-content: center; gap: 12px; text-align: center; color: white; border: 1px solid rgb(255 255 255 / .08); border-radius: 18px; background: #0f172a; cursor: pointer; }
+.upload-drop span { color: #cbd5e1; font-size: 14px; font-weight: 600; text-transform: none; letter-spacing: 0; }
+.upload-drop input, .button-label input { display: none; }
+.button-row { display: flex; gap: 10px; flex-wrap: wrap; padding: 16px 20px; background: #020617; }
+button, .button-label { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid #cbd5e1; border-radius: 13px; background: white; color: #0f172a; min-height: 42px; padding: 0 16px; font-weight: 900; text-transform: none; letter-spacing: 0; font-size: 14px; }
+button.primary, .primary { background: #020617; color: white; border-color: #020617; }
+.status-box { margin: 0; padding: 16px 20px; background: #fef3c7; color: #92400e; font-weight: 700; line-height: 1.5; border-top: 1px solid #fde68a; }
+.diagnostic-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 14px; }
+.diagnostic-grid div { border: 1px solid #e2e8f0; border-radius: 14px; background: #f8fafc; padding: 12px; }
+.diagnostic-grid strong { display: block; font-size: 12px; color: #64748b; }
+.diagnostic-grid span { display: block; margin-top: 6px; font-weight: 900; word-break: break-word; }
+.flag-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+.flag { text-align: left; align-items: flex-start; justify-content: flex-start; display: grid; min-height: 118px; border-radius: 16px; padding: 14px; border: 1px solid #e2e8f0; }
+.flag span { color: #64748b; font-weight: 600; line-height: 1.45; }
+.flag.active { background: #0f172a; color: white; border-color: #0f172a; }
+.flag.active span { color: #cbd5e1; }
+.risk { display: inline-flex; margin: 10px 0 16px; border-radius: 999px; padding: 8px 12px; font-weight: 900; border: 1px solid #e2e8f0; }
+.risk-low { background: #ecfdf5; color: #047857; border-color: #a7f3d0; }
+.risk-moderate { background: #fffbeb; color: #b45309; border-color: #fde68a; }
+.risk-high { background: #fff1f2; color: #be123c; border-color: #fecdd3; }
+.region { border-top: 1px solid #e2e8f0; padding: 12px 0; }
+.region strong, .region span { display: block; }
+.region span { margin-top: 4px; color: #64748b; line-height: 1.4; }
+.question { display: block; margin-top: 16px; }
+.question span { display: block; margin-top: 6px; color: #64748b; line-height: 1.45; font-size: 14px; font-weight: 600; text-transform: none; letter-spacing: 0; }
+.report pre { white-space: pre-wrap; word-break: break-word; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 14px; line-height: 1.55; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
+
+@media (max-width: 980px) {
+  .app-shell { display: block; }
+  .sidebar { display: none; }
+  .workspace { padding: 16px; }
+  .page-header { display: block; }
+  .page-header .primary { margin-top: 14px; width: 100%; }
+  .grid { grid-template-columns: 1fr; }
+  .form-grid, .diagnostic-grid, .flag-grid { grid-template-columns: 1fr; }
+  .upload-drop { min-height: 260px; }
+}
